@@ -1,0 +1,111 @@
+﻿<Page x:Class="TheFirstProgram.View.CryptingUpTopPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TheFirstProgram.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1100"
+      Title="CryptingUpTopPage" Background="#021b24">
+
+    <Page.Resources>
+        <CollectionViewSource x:Key="CurrenciesData"  
+                              Filter="CollectionViewSource_Filter">
+        </CollectionViewSource>
+    </Page.Resources>
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Height="600" VerticalAlignment="Center" Width="1100">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="60" Margin="40, 40, 0, 0" Width="1058">
+            <Label Content="Search" Foreground="White" Height="44" Width="100" FontSize="28" FontFamily="Calibri" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <TextBox x:Name="SearchBox" Foreground="White" Margin="10" CaretBrush="White" Height="40" Width="100" FontSize="28" FontFamily="Calibri" HorizontalContentAlignment="Left" VerticalAlignment="Center" SelectionBrush="#FFE6E6E6" TextChanged="SearchBox_TextChanged" />
+        </StackPanel>
+        <StackPanel Height="477" Margin="0, 20, 0, 0">
+            <DataGrid x:Name="TableTop" Background="#021b24" FontSize="14" AutoGenerateColumns="False" HorizontalAlignment="Center" BorderBrush="#FF021B24" Width="900" MouseDoubleClick="TableTop_MouseDoubleClick" RenderTransformOrigin="0.5,0.5" Height="478" ItemsSource="{Binding Source={StaticResource CurrenciesData}}" GridLinesVisibility="None" Foreground="#FF021B24" VerticalGridLinesBrush="White" HorizontalGridLinesBrush="White" OpacityMask="#FF021B24" >
+                <DataGrid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.35"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0.61"/>
+                    </TransformGroup>
+                </DataGrid.RenderTransform>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" Foreground="LightGray" DisplayIndex="0">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Height" Value="30"/>
+                                <Setter Property="Background" Value="#021b24"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontSize" Value="18" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="Margin" Value="10" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Currency Code" Binding="{Binding CurrencyCode}" IsReadOnly="True" Foreground="LightGray" DisplayIndex="1">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Height" Value="30"/>
+                                <Setter Property="Background" Value="#021b24"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontSize" Value="18" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="Margin" Value="10" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header=" Price " Binding="{Binding Price, StringFormat = 0.0000 }" IsReadOnly="True" Foreground="LightGray" DisplayIndex="2">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Height" Value="30"/>
+                                <Setter Property="Background" Value="#021b24"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontSize" Value="18" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="Margin" Value="10" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Volume" Binding="{Binding Volume, StringFormat = 0.0000}" IsReadOnly="True" Foreground="LightGray" DisplayIndex="3">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Height" Value="30"/>
+                                <Setter Property="Background" Value="#021b24"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontSize" Value="18" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="Margin" Value="10" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Change 1 hour" Binding="{Binding Change1h, StringFormat = 0.0000}"   IsReadOnly="True" Foreground="LightGray" DisplayIndex="4">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Height" Value="30"/>
+                                <Setter Property="Background" Value="#021b24"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontSize" Value="18" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="Margin" Value="10" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Change 1 day" Binding="{Binding Change1d, StringFormat = 0.0000 }"   IsReadOnly="True" Foreground="LightGray" DisplayIndex="5">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Height" Value="30"/>
+                                <Setter Property="Background" Value="#021b24"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontSize" Value="18" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="Margin" Value="10" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </StackPanel>
+    </StackPanel>
+</Page>

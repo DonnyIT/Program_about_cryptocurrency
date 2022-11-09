@@ -1,0 +1,37 @@
+﻿<Page x:Class="TheFirstProgram.View.InformationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TheFirstProgram.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="InformationPage">
+
+    <Grid Background="#021b24">
+        <Label Content="Detailed information" Foreground="Azure" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="320" FontSize="32"  />
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0" Width="1000">
+        <StackPanel Orientation="Vertical"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="500" Height="320">
+            <Label Content="Name" Foreground="White" Height="40" Width="210" FontSize="28" FontFamily="Calibri" HorizontalAlignment="Center" HorizontalContentAlignment="Left" />
+                <Label Content="CurrencyCode" Foreground="White" Height="40" Width="210" FontSize="28" FontFamily="Calibri" HorizontalAlignment="Center" HorizontalContentAlignment="Left" />
+            <Label Content="Price" Foreground="White" Height="40" Width="210" FontSize="28" FontFamily="Calibri" HorizontalAlignment="Center" HorizontalContentAlignment="Left" />
+            <Label Content="Volume 24 Hours" Foreground="White" Height="40" Width="210" FontSize="28" FontFamily="Calibri" HorizontalAlignment="Center" HorizontalContentAlignment="Left" />
+            <Label Content="Change 1 hour" Foreground="White" Height="40" Width="210" FontSize="28" FontFamily="Calibri" HorizontalAlignment="Center" HorizontalContentAlignment="Left" />
+            <Label Content="Change 24 hours" Foreground="White" Height="40" Width="210" FontSize="28" FontFamily="Calibri" HorizontalAlignment="Center" HorizontalContentAlignment="Left" />
+            <Label Content="Change 7 days" Foreground="White" Height="40" Width="210" FontSize="28" FontFamily="Calibri" HorizontalAlignment="Center" HorizontalContentAlignment="Left" />
+            <Label Content="Status" Foreground="White" Height="40" Width="210" FontSize="28" FontFamily="Calibri" HorizontalAlignment="Center" HorizontalContentAlignment="Left" />
+        </StackPanel>
+            <StackPanel Orientation="Vertical" Width="500" HorizontalAlignment="Left" Height="320" >
+                <TextBox x:Name="Name" Foreground="White" Height="40" Width="500" FontSize="28" FontFamily="Calibri" HorizontalContentAlignment="Left" VerticalAlignment="Top" />
+                <TextBox x:Name="CurrencyCode" Foreground="White" Height="40" Width="500" FontSize="28" FontFamily="Calibri" HorizontalContentAlignment="Left" VerticalAlignment="Top" />
+                <TextBox x:Name="Price" Foreground="White" Height="40" Width="500" FontSize="28" FontFamily="Calibri" HorizontalContentAlignment="Left" VerticalAlignment="Top" />
+                <TextBox x:Name="Volume24h" Foreground="White" Height="40" Width="500" FontSize="28" FontFamily="Calibri" HorizontalContentAlignment="Left" VerticalAlignment="Top" />
+                <TextBox x:Name="Change1h" Foreground="White" Height="40" Width="500" FontSize="28" FontFamily="Calibri" HorizontalContentAlignment="Left" VerticalAlignment="Top" />
+                <TextBox x:Name="Change24h" Foreground="White" Height="40" Width="500" FontSize="28" FontFamily="Calibri" HorizontalContentAlignment="Left" VerticalAlignment="Top" />
+                <TextBox x:Name="Change7d" Foreground="White" Height="40" Width="500" FontSize="28" FontFamily="Calibri" HorizontalContentAlignment="Left" VerticalAlignment="Top" />
+                <TextBox x:Name="Status" Foreground="White" Height="40" Width="500" FontSize="28" FontFamily="Calibri" HorizontalContentAlignment="Left" VerticalAlignment="Top" />
+            </StackPanel>
+      </StackPanel>
+        
+    </Grid>
+</Page>
